@@ -1,2 +1,2 @@
 # lets only deploy from config-root
-!/config-root
+!config-root/*
