@@ -80,12 +80,12 @@
   path: helmfiles/myapps/helmfile.yaml
   releases:
   - apiVersion: v1
-    applicationUrl: http://nodey554-myapps.change.me
+    applicationUrl: http://nodey554-myapps.34.118.108.125.nip.io
     description: A Helm chart for Kubernetes
     icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
     ingresses:
     - name: nodey554
-      url: http://nodey554-myapps.change.me
+      url: http://nodey554-myapps.34.118.108.125.nip.io
     name: nodey554
     repositoryName: dev
     repositoryUrl: http://chartmuseum-jx.35.242.181.72.nip.io/
