@@ -26,7 +26,7 @@ jxRequirements:
     gitServer: https://github.com
     provider: kubernetes
   ingress:
-    domain: change.me
+    domain: 34.118.108.125.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -myapps.
