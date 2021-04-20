@@ -30,6 +30,7 @@
     name: kuberhealthy
     repositoryName: kuberhealthy
     repositoryUrl: https://comcast.github.io/kuberhealthy/helm-repos
+    resourcePath: config-root/namespaces/kuberhealthy/kuberhealthy
     sources:
     - https://github.com/Comcast/kuberhealthy
     - https://github.com/Comcast/kuberhealthy/tree/master/deploy/helm/kuberhealthy
@@ -46,6 +47,7 @@
     name: jx-kh-check
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/kuberhealthy/jx-kh-check
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
     version: 0.0.59
@@ -69,7 +71,23 @@
     name: ingress-nginx
     repositoryName: ingress-nginx
     repositoryUrl: https://kubernetes.github.io/ingress-nginx
+    resourcePath: config-root/namespaces/nginx/ingress-nginx-nginx-ingress
     sources:
     - https://github.com/kubernetes/ingress-nginx
     type: application
     version: 3.12.0
+- namespace: myapps
+  path: helmfiles/myapps/helmfile.yaml
+  releases:
+  - apiVersion: v1
+    applicationUrl: http://nodey554-myapps.change.me
+    description: A Helm chart for Kubernetes
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    ingresses:
+    - name: nodey554
+      url: http://nodey554-myapps.change.me
+    name: nodey554
+    repositoryName: dev
+    repositoryUrl: http://chartmuseum-jx.35.242.181.72.nip.io/
+    resourcePath: config-root/namespaces/myapps/nodey554
+    version: 1.0.42
