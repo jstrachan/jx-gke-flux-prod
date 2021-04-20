@@ -1,11 +1,16 @@
 filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
 namespace: myapps
 repositories:
 - name: dev
   url: http://chartmuseum-jx.35.242.181.72.nip.io/
 releases:
-- chart: dev/nodey554
-  version: 1.0.41
+  version: 1.0.42
   name: nodey554
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

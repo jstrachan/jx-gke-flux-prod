@@ -35,6 +35,15 @@
 	      <td></td>
 	      <td><a href='https://github.com/kubernetes/ingress-nginx'>source</a></td>
 	    </tr>
+    <tr>
+		      <td colspan='4'><h3>myapps</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> nodey554 </a></td>
+	      <td>1.0.42</td>
+	      <td><a href='http://nodey554-myapps.change.me'>view</a></td>
+	      <td></td>
+	    </tr>
 
   </tbody>
 </table>
