@@ -5,7 +5,7 @@ metadata:
   name: go-chaos-go-chaos
   labels:
     draft: draft-app
-    chart: "go-chaos-0.0.2"
+    chart: "go-chaos-0.0.3"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: myapps
   annotations:
@@ -24,11 +24,15 @@ spec:
       serviceAccountName: go-chaos-go-chaos
       containers:
         - name: go-chaos
-          image: "gcr.io/jenkins-x-labs-bdd1/go-chaos:0.0.2"
+          image: "gcr.io/jenkins-x-labs-bdd1/go-chaos:0.0.3"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.2
+              value: 0.0.3
+            - name: CRASH_DURATION
+              value: "10s"
+            - name: FAIL
+              value: "true"
           envFrom: null
           ports:
             - name: http
