@@ -91,3 +91,15 @@
     repositoryUrl: http://chartmuseum-jx.35.242.181.72.nip.io/
     resourcePath: config-root/namespaces/myapps/nodey554
     version: 1.0.44
+  - apiVersion: v1
+    applicationUrl: http://go-chaos-myapps.34.118.108.125.nip.io
+    description: A Helm chart for Kubernetes
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    ingresses:
+    - name: go-chaos
+      url: http://go-chaos-myapps.34.118.108.125.nip.io
+    name: go-chaos
+    repositoryName: dev
+    repositoryUrl: http://chartmuseum-jx.35.242.181.72.nip.io/
+    resourcePath: config-root/namespaces/myapps/go-chaos
+    version: 0.0.1
