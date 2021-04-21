@@ -102,4 +102,4 @@
     repositoryName: dev
     repositoryUrl: http://chartmuseum-jx.35.242.181.72.nip.io/
     resourcePath: config-root/namespaces/myapps/go-chaos
-    version: 0.0.1
+    version: 0.0.2
