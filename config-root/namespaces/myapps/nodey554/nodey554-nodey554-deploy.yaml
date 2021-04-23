@@ -5,7 +5,7 @@ metadata:
   name: nodey554-nodey554
   labels:
     draft: draft-app
-    chart: "nodey554-1.0.44"
+    chart: "nodey554-1.0.45"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: myapps
   annotations:
@@ -24,14 +24,15 @@ spec:
       serviceAccountName: nodey554-nodey554
       containers:
         - name: nodey554
-          image: "gcr.io/jenkins-x-labs-bdd1/nodey554:1.0.44"
+          image: "gcr.io/jenkins-x-labs-bdd1/nodey554:1.0.45"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 1.0.44
+              value: 1.0.45
           envFrom: null
           ports:
-            - containerPort: 8080
+            - name: http
+              containerPort: 8080
           livenessProbe:
             httpGet:
               path: /
