@@ -4,11 +4,8 @@ kind: Service
 metadata:
   name: nodey554
   labels:
-    chart: "nodey554-1.0.44"
+    chart: "nodey554-1.0.45"
     gitops.jenkins-x.io/pipeline: 'namespaces'
-  annotations:
-    fabric8.io/expose: "true"
-    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
   namespace: myapps
 spec:
   type: ClusterIP
