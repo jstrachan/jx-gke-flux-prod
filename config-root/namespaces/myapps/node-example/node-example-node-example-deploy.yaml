@@ -1,0 +1,60 @@
+# Source: node-example/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-example-node-example
+  labels:
+    draft: draft-app
+    chart: "node-example-0.0.7"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: myapps
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: node-example-node-example
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: node-example-node-example
+    spec:
+      serviceAccountName: node-example-node-example
+      containers:
+        - name: node-example
+          image: "gcr.io/jenkins-x-labs-bdd1/node-example:0.0.7"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: VERSION
+              value: 0.0.7
+          envFrom: null
+          ports:
+            - name: http
+              containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
+        - name: "tekton-container-registry-auth"
