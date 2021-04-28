@@ -18,5 +18,8 @@ releases:
   name: go-chaos
   values:
   - jx-values.yaml
+- chart: dev/node-example
+  version: 0.0.7
+  name: node-example
 templates: {}
 renderedvalues: {}
