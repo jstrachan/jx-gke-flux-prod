@@ -1,0 +1,8 @@
+# Source: node-example/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: node-example-node-example
+  namespace: myapps
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
