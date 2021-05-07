@@ -4,6 +4,8 @@ kind: PodDisruptionBudget
 metadata:
   name: kuberhealthy-pdb
   namespace: kuberhealthy
+  annotations:
+    meta.helm.sh/release-name: 'kuberhealthy'
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:

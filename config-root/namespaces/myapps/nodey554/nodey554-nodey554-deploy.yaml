@@ -7,9 +7,10 @@ metadata:
     draft: draft-app
     chart: "nodey554-1.0.45"
     gitops.jenkins-x.io/pipeline: 'namespaces'
-  namespace: myapps
   annotations:
+    meta.helm.sh/release-name: 'nodey554'
     wave.pusher.com/update-on-config-change: 'true'
+  namespace: myapps
 spec:
   selector:
     matchLabels:

@@ -4,6 +4,8 @@ kind: KuberhealthyCheck
 metadata:
   name: dns-status-internal
   namespace: kuberhealthy
+  annotations:
+    meta.helm.sh/release-name: 'kuberhealthy'
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:

@@ -4,6 +4,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'nodey554'
   name: nodey554
   namespace: myapps
   labels:

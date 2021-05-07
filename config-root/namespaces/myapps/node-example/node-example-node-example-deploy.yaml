@@ -1,39 +1,35 @@
-# Source: go-chaos/templates/deployment.yaml
+# Source: node-example/templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-chaos-go-chaos
+  name: node-example-node-example
   labels:
     draft: draft-app
-    chart: "go-chaos-0.0.3"
+    chart: "node-example-0.0.7"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
-    meta.helm.sh/release-name: 'go-chaos'
+    meta.helm.sh/release-name: 'node-example'
     wave.pusher.com/update-on-config-change: 'true'
   namespace: myapps
 spec:
   selector:
     matchLabels:
-      app: go-chaos-go-chaos
+      app: node-example-node-example
   replicas: 1
   template:
     metadata:
       labels:
         draft: draft-app
-        app: go-chaos-go-chaos
+        app: node-example-node-example
     spec:
-      serviceAccountName: go-chaos-go-chaos
+      serviceAccountName: node-example-node-example
       containers:
-        - name: go-chaos
-          image: "gcr.io/jenkins-x-labs-bdd1/go-chaos:0.0.3"
+        - name: node-example
+          image: "gcr.io/jenkins-x-labs-bdd1/node-example:0.0.7"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.3
-            - name: CRASH_DURATION
-              value: "10s"
-            - name: FAIL
-              value: "true"
+              value: 0.0.7
           envFrom: null
           ports:
             - name: http
