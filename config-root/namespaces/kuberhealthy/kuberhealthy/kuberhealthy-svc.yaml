@@ -11,6 +11,7 @@ metadata:
     prometheus.io/scrape: "true"
     prometheus.io/port: "80"
     prometheus.io/path: "/metrics"
+    meta.helm.sh/release-name: 'kuberhealthy'
 spec:
   type: ClusterIP
   ports:

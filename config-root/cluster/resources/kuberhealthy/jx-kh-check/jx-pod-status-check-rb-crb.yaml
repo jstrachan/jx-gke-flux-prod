@@ -3,6 +3,8 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: jx-pod-status-check-rb
+  annotations:
+    meta.helm.sh/release-name: 'jx-kh-check'
   labels:
     gitops.jenkins-x.io/pipeline: 'cluster'
 roleRef:

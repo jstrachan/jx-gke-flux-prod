@@ -1,10 +1,10 @@
-# Source: nodey554/templates/sa.yaml
+# Source: node-example/templates/sa.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: nodey554-nodey554
+  name: node-example-node-example
   annotations:
-    meta.helm.sh/release-name: 'nodey554'
+    meta.helm.sh/release-name: 'node-example'
   namespace: myapps
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'

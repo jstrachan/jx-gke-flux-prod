@@ -3,6 +3,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: kuberhealthy
+  annotations:
+    meta.helm.sh/release-name: 'kuberhealthy'
   namespace: kuberhealthy
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'

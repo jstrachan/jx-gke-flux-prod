@@ -1,13 +1,13 @@
-# Source: nodey554/templates/service.yaml
+# Source: node-example/templates/service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodey554
+  name: node-example
   labels:
-    chart: "nodey554-1.0.45"
+    chart: "node-example-0.0.7"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
-    meta.helm.sh/release-name: 'nodey554'
+    meta.helm.sh/release-name: 'node-example'
   namespace: myapps
 spec:
   type: ClusterIP
@@ -17,4 +17,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: nodey554-nodey554
+    app: node-example-node-example

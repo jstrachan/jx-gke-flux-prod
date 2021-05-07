@@ -8,6 +8,7 @@ metadata:
     app: kuberhealthy
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
+    meta.helm.sh/release-name: 'kuberhealthy'
     wave.pusher.com/update-on-config-change: 'true'
 spec:
   replicas: 2

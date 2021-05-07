@@ -3,6 +3,8 @@ apiVersion: "rbac.authorization.k8s.io/v1"
 kind: ClusterRoleBinding
 metadata:
   name: kuberhealthy-daemonset-khcheck
+  annotations:
+    meta.helm.sh/release-name: 'kuberhealthy'
   labels:
     gitops.jenkins-x.io/pipeline: 'cluster'
 roleRef:

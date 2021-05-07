@@ -1,11 +1,11 @@
-# Source: go-chaos/templates/ingress.yaml
+# Source: node-example/templates/ingress.yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-    meta.helm.sh/release-name: 'go-chaos'
-  name: go-chaos
+    meta.helm.sh/release-name: 'node-example'
+  name: node-example
   namespace: myapps
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -14,6 +14,6 @@ spec:
     - http:
         paths:
           - backend:
-              serviceName: go-chaos
+              serviceName: node-example
               servicePort: 80
-      host: go-chaos-myapps.34.118.108.125.nip.io
+      host: node-example-myapps.34.118.108.125.nip.io
