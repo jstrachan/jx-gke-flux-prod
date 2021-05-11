@@ -114,16 +114,17 @@
     resourcePath: config-root/namespaces/myapps/go-chaos
     version: 0.0.3
   - apiVersion: v1
+    appVersion: 0.0.10
     applicationUrl: http://node-example-myapps.34.118.108.125.nip.io
     description: A Helm chart for Kubernetes
-    firstDeployed: "2021-05-07T19:51:16Z"
+    firstDeployed: "2021-05-11T11:49:14Z"
     icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
     ingresses:
     - name: node-example
       url: http://node-example-myapps.34.118.108.125.nip.io
-    lastDeployed: "2021-05-07T19:51:16Z"
+    lastDeployed: "2021-05-11T11:49:14Z"
     name: node-example
     repositoryName: dev
     repositoryUrl: http://chartmuseum-jx.35.242.181.72.nip.io/
     resourcePath: config-root/namespaces/myapps/node-example
-    version: 0.0.7
+    version: 0.0.10
