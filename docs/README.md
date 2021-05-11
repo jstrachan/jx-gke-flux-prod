@@ -52,7 +52,7 @@
 	    </tr>
     <tr>
 	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> node-example </a></td>
-	      <td>0.0.7</td>
+	      <td>0.0.9</td>
 	      <td><a href='http://node-example-myapps.34.118.108.125.nip.io'>view</a></td>
 	      <td></td>
 	    </tr>
